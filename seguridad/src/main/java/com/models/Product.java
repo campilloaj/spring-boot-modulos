@@ -1,7 +1,12 @@
 package com.models;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table("products")
 public class Product {
 
+	@Id
 	private int id;
 	
 	private String productName;
@@ -20,6 +25,10 @@ public class Product {
 
 	public void setProductName(String productName) {
 		this.productName = productName;
+	}
+	
+	public Product() {
+
 	}
 
 	public Product(int id, String productName) {
